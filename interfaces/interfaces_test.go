@@ -14,40 +14,40 @@ import (
 //PASS
 //ok  	github.com/PROger4ever-Golang/Go-benchmarks/interfaces	4.094s
 
-type ExampleInterface interface {
+type SampleInterface interface {
 	Number() int
 	SetNumber(number int)
 }
 
-type ExampleStruct struct {
+type SampleStruct struct {
 	number int
 }
 
-func (es *ExampleStruct) Number() int {
+func (es *SampleStruct) Number() int {
 	return es.number
 }
-func (es *ExampleStruct) SetNumber(number int) {
+func (es *SampleStruct) SetNumber(number int) {
 	es.number = number
 }
 
-var exampleObject = &ExampleStruct{}
-var interfaceObject ExampleInterface
-var exampleNumber int
+var tmpObject = &SampleStruct{}
+var interfaceObject SampleInterface
+var tmpNumber int
 
 func BenchmarkBoxing(b *testing.B) {
 	b.Run("Clear", func(b *testing.B) {
 		for n := 0; n < b.N; n++ {
-			exampleObject.SetNumber(n)
-			exampleNumber = exampleObject.Number()
+			tmpObject.SetNumber(n)
+			tmpNumber = tmpObject.Number()
 		}
 	})
 
 	b.Run("Boxing", func(b *testing.B) {
 		for n := 0; n < b.N; n++ {
-			interfaceObject = exampleObject
+			interfaceObject = tmpObject
 			interfaceObject.SetNumber(n)
-			exampleObject = interfaceObject.(*ExampleStruct)
-			exampleNumber = exampleObject.Number()
+			tmpObject = interfaceObject.(*SampleStruct)
+			tmpNumber = tmpObject.Number()
 		}
 	})
 }
