@@ -2,7 +2,7 @@ package structsCustom
 
 var quoteBytes = []byte(`"`)
 
-const jsonStartLength = len(`{"Field1":"`)
+const jsonStartLength = len(`{"Field01":"`)
 const jsonEndLength = len(`"}`)
 
 const shortFieldLength = len(`","FieldX":"`)

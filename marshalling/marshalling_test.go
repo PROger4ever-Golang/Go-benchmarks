@@ -14,6 +14,8 @@ import (
 	"github.com/PROger4ever-Golang/Go-benchmarks/marshalling/structsCustom"
 )
 
+//TODO: add benchmarks for external json-libraries and marshal-codegenerators like github.com/pquerna/ffjson and github.com/mailru/easyjson
+
 //approximate result
 //$ go test -benchmem -bench=^BenchmarkMarshalling.*$ -benchtime=10s --timeout 99999s ./...
 //ok  	github.com/PROger4ever-Golang/Go-benchmarks/interfaces	0.002s

@@ -7,22 +7,6 @@ import (
 
 //approximate result
 //$ go test -benchmem -bench=^BenchmarkReturn$ -benchtime=10s --timeout 99999s ./...
-//PASS
-//ok  	github.com/PROger4ever-Golang/Go-benchmarks/allocation	0.004s
-//PASS
-//ok  	github.com/PROger4ever-Golang/Go-benchmarks/collections	0.002s
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common/samples/jsonsStrings	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common/samples/mapsInt	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common/samples/mapsStrings	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common/samples/structsInt	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common/samples/structsStrings	[no test files]
-//PASS
-//ok  	github.com/PROger4ever-Golang/Go-benchmarks/interfaces	0.001s
-//PASS
-//ok  	github.com/PROger4ever-Golang/Go-benchmarks/marshalling	0.001s
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/marshalling/structsCustom	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/marshalling/structsMap	[no test files]
 //goos: linux
 //goarch: amd64
 //pkg: github.com/PROger4ever-Golang/Go-benchmarks/syntax/functions
@@ -45,7 +29,7 @@ import (
 //ok  	github.com/PROger4ever-Golang/Go-benchmarks/syntax/functions	188.457s
 
 var (
-	tmpField1, tmpField2, tmpField3, tmpField4, tmpField5, tmpField6, tmpField7, tmpField8, tmpField9 int
+	tmpField01, tmpField02, tmpField03, tmpField04, tmpField05, tmpField06, tmpField07, tmpField08, tmpField09 int
 	tmpField10, tmpField11, tmpField12, tmpField13, tmpField14, tmpField15, tmpField16, tmpField17    int
 )
 
@@ -64,58 +48,58 @@ var tmpPointer17 *structsInt.Struct17
 func returnUnnamed01(n int) int {
 	return n + 1
 }
-func returnUnusedNamed01(n int) (Field1 int) {
+func returnUnusedNamed01(n int) (Field01 int) {
 	return n + 1
 }
-func returnNamed01(n int) (Field1 int) {
-	Field1 = n + 1
+func returnNamed01(n int) (Field01 int) {
+	Field01 = n + 1
 	return
 }
 
 func returnUnnamed03(n int) (int, int, int) {
 	return n + 1, n + 2, n + 3
 }
-func returnUnusedNamed03(n int) (Field1, Field2, Field3 int) {
+func returnUnusedNamed03(n int) (Field01, Field02, Field03 int) {
 	return n + 1, n + 2, n + 3
 }
-func returnNamed03(n int) (Field1, Field2, Field3 int) {
-	Field1 = n + 1
-	Field2 = n + 2
-	Field3 = n + 3
+func returnNamed03(n int) (Field01, Field02, Field03 int) {
+	Field01 = n + 1
+	Field02 = n + 2
+	Field03 = n + 3
 	return
 }
 
 func returnUnnamed05(n int) (int, int, int, int, int) {
 	return n + 1, n + 2, n + 3, n + 4, n + 5
 }
-func returnUnusedNamed05(n int) (Field1, Field2, Field3, Field4, Field5 int) {
+func returnUnusedNamed05(n int) (Field01, Field02, Field03, Field04, Field05 int) {
 	return n + 1, n + 2, n + 3, n + 4, n + 5
 }
-func returnNamed05(n int) (Field1, Field2, Field3, Field4, Field5 int) {
-	Field1 = n + 1
-	Field2 = n + 2
-	Field3 = n + 3
-	Field4 = n + 4
-	Field5 = n + 5
+func returnNamed05(n int) (Field01, Field02, Field03, Field04, Field05 int) {
+	Field01 = n + 1
+	Field02 = n + 2
+	Field03 = n + 3
+	Field04 = n + 4
+	Field05 = n + 5
 	return
 }
 
 func returnUnnamed10(n int) (int, int, int, int, int, int, int, int, int, int) {
 	return n + 1, n + 2, n + 3, n + 4, n + 5, n + 6, n + 7, n + 8, n + 9, n + 10
 }
-func returnUnusedNamed10(n int) (Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10 int) {
+func returnUnusedNamed10(n int) (Field01, Field02, Field03, Field04, Field05, Field06, Field07, Field08, Field09, Field10 int) {
 	return n + 1, n + 2, n + 3, n + 4, n + 5, n + 6, n + 7, n + 8, n + 9, n + 10
 }
-func returnNamed10(n int) (Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10 int) {
-	Field1 = n + 1
-	Field2 = n + 2
-	Field3 = n + 3
-	Field4 = n + 4
-	Field5 = n + 5
-	Field6 = n + 6
-	Field7 = n + 7
-	Field8 = n + 8
-	Field9 = n + 9
+func returnNamed10(n int) (Field01, Field02, Field03, Field04, Field05, Field06, Field07, Field08, Field09, Field10 int) {
+	Field01 = n + 1
+	Field02 = n + 2
+	Field03 = n + 3
+	Field04 = n + 4
+	Field05 = n + 5
+	Field06 = n + 6
+	Field07 = n + 7
+	Field08 = n + 8
+	Field09 = n + 9
 	Field10 = n + 10
 	return
 }
@@ -125,23 +109,23 @@ func returnUnnamed17(n int) (int, int, int, int, int, int, int, int, int, int, i
 		n + 6, n + 7, n + 8, n + 9, n + 10,
 		n + 11, n + 12, n + 13, n + 14, n + 15, n + 16, n + 17
 }
-func returnUnusedNamed17(n int) (Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10,
+func returnUnusedNamed17(n int) (Field01, Field02, Field03, Field04, Field05, Field06, Field07, Field08, Field09, Field10,
 Field11, Field12, Field13, Field14, Field15, Field16, Field17 int) {
 	return n + 1, n + 2, n + 3, n + 4, n + 5,
 		n + 6, n + 7, n + 8, n + 9, n + 10,
 		n + 11, n + 12, n + 13, n + 14, n + 15, n + 16, n + 17
 }
-func returnNamed17(n int) (Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9, Field10,
+func returnNamed17(n int) (Field01, Field02, Field03, Field04, Field05, Field06, Field07, Field08, Field09, Field10,
 Field11, Field12, Field13, Field14, Field15, Field16, Field17 int) {
-	Field1 = n + 1
-	Field2 = n + 2
-	Field3 = n + 3
-	Field4 = n + 4
-	Field5 = n + 5
-	Field6 = n + 6
-	Field7 = n + 7
-	Field8 = n + 8
-	Field9 = n + 9
+	Field01 = n + 1
+	Field02 = n + 2
+	Field03 = n + 3
+	Field04 = n + 4
+	Field05 = n + 5
+	Field06 = n + 6
+	Field07 = n + 7
+	Field08 = n + 8
+	Field09 = n + 9
 	Field10 = n + 10
 	Field11 = n + 11
 	Field12 = n + 12
@@ -157,19 +141,19 @@ func BenchmarkReturn(b *testing.B) {
 	b.Run("01", func(b *testing.B) {
 		b.Run("Unnamed", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1 = returnUnnamed01(n)
+				tmpField01 = returnUnnamed01(n)
 			}
 		})
 
 		b.Run("UnusedNamed", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1 = returnUnusedNamed01(n)
+				tmpField01 = returnUnusedNamed01(n)
 			}
 		})
 
 		b.Run("Named", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1 = returnNamed01(n)
+				tmpField01 = returnNamed01(n)
 			}
 		})
 	})
@@ -177,19 +161,19 @@ func BenchmarkReturn(b *testing.B) {
 	b.Run("03", func(b *testing.B) {
 		b.Run("Unnamed", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3 = returnUnnamed03(n)
+				tmpField01, tmpField02, tmpField03 = returnUnnamed03(n)
 			}
 		})
 
 		b.Run("UnusedNamed", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3 = returnUnusedNamed03(n)
+				tmpField01, tmpField02, tmpField03 = returnUnusedNamed03(n)
 			}
 		})
 
 		b.Run("Named", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3 = returnNamed03(n)
+				tmpField01, tmpField02, tmpField03 = returnNamed03(n)
 			}
 		})
 	})
@@ -197,19 +181,19 @@ func BenchmarkReturn(b *testing.B) {
 	b.Run("05", func(b *testing.B) {
 		b.Run("Unnamed", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3, tmpField4, tmpField5 = returnUnnamed05(n)
+				tmpField01, tmpField02, tmpField03, tmpField04, tmpField05 = returnUnnamed05(n)
 			}
 		})
 
 		b.Run("UnusedNamed", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3, tmpField4, tmpField5 = returnUnusedNamed05(n)
+				tmpField01, tmpField02, tmpField03, tmpField04, tmpField05 = returnUnusedNamed05(n)
 			}
 		})
 
 		b.Run("Named", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3, tmpField4, tmpField5 = returnNamed05(n)
+				tmpField01, tmpField02, tmpField03, tmpField04, tmpField05 = returnNamed05(n)
 			}
 		})
 	})
@@ -217,22 +201,22 @@ func BenchmarkReturn(b *testing.B) {
 	b.Run("10", func(b *testing.B) {
 		b.Run("Unnamed", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3, tmpField4, tmpField5,
-					tmpField6, tmpField7, tmpField8, tmpField9, tmpField10 = returnUnnamed10(n)
+				tmpField01, tmpField02, tmpField03, tmpField04, tmpField05,
+					tmpField06, tmpField07, tmpField08, tmpField09, tmpField10 = returnUnnamed10(n)
 			}
 		})
 
 		b.Run("UnusedNamed", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3, tmpField4, tmpField5,
-					tmpField6, tmpField7, tmpField8, tmpField9, tmpField10 = returnUnusedNamed10(n)
+				tmpField01, tmpField02, tmpField03, tmpField04, tmpField05,
+					tmpField06, tmpField07, tmpField08, tmpField09, tmpField10 = returnUnusedNamed10(n)
 			}
 		})
 
 		b.Run("Named", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3, tmpField4, tmpField5,
-					tmpField6, tmpField7, tmpField8, tmpField9, tmpField10 = returnNamed10(n)
+				tmpField01, tmpField02, tmpField03, tmpField04, tmpField05,
+					tmpField06, tmpField07, tmpField08, tmpField09, tmpField10 = returnNamed10(n)
 			}
 		})
 	})
@@ -240,8 +224,8 @@ func BenchmarkReturn(b *testing.B) {
 	b.Run("17", func(b *testing.B) {
 		b.Run("Unnamed", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3, tmpField4, tmpField5,
-					tmpField6, tmpField7, tmpField8, tmpField9, tmpField10,
+				tmpField01, tmpField02, tmpField03, tmpField04, tmpField05,
+					tmpField06, tmpField07, tmpField08, tmpField09, tmpField10,
 					tmpField11, tmpField12, tmpField13, tmpField14, tmpField15,
 					tmpField16, tmpField17 = returnUnnamed17(n)
 			}
@@ -249,8 +233,8 @@ func BenchmarkReturn(b *testing.B) {
 
 		b.Run("UnusedNamed", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3, tmpField4, tmpField5,
-					tmpField6, tmpField7, tmpField8, tmpField9, tmpField10,
+				tmpField01, tmpField02, tmpField03, tmpField04, tmpField05,
+					tmpField06, tmpField07, tmpField08, tmpField09, tmpField10,
 					tmpField11, tmpField12, tmpField13, tmpField14, tmpField15,
 					tmpField16, tmpField17 = returnUnusedNamed17(n)
 			}
@@ -258,8 +242,8 @@ func BenchmarkReturn(b *testing.B) {
 
 		b.Run("Named", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1, tmpField2, tmpField3, tmpField4, tmpField5,
-					tmpField6, tmpField7, tmpField8, tmpField9, tmpField10,
+				tmpField01, tmpField02, tmpField03, tmpField04, tmpField05,
+					tmpField06, tmpField07, tmpField08, tmpField09, tmpField10,
 					tmpField11, tmpField12, tmpField13, tmpField14, tmpField15,
 					tmpField16, tmpField17 = returnNamed17(n)
 			}

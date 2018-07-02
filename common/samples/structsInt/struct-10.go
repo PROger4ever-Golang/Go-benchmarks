@@ -1,21 +1,21 @@
 package structsInt
 
 type Struct10 struct {
-	Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9 int
+	Field01, Field02, Field03, Field04, Field05, Field06, Field07, Field08, Field09 int
 	Field10                                                                int
 }
 
 func NewSampleStruct10() *Struct10 {
 	return &Struct10{
-		Field1: 1,
-		Field2: 2,
-		Field3: 3,
-		Field4: 4,
-		Field5: 5,
-		Field6: 6,
-		Field7: 7,
-		Field8: 8,
-		Field9: 9,
+		Field01: 1,
+		Field02: 2,
+		Field03: 3,
+		Field04: 4,
+		Field05: 5,
+		Field06: 6,
+		Field07: 7,
+		Field08: 8,
+		Field09: 9,
 		Field10: 10,
 	}
 }

@@ -1,13 +1,13 @@
 package structsInt
 
 type Struct03 struct {
-	Field1, Field2, Field3 int
+	Field01, Field02, Field03 int
 }
 
 func NewSampleStruct03() *Struct03 {
 	return &Struct03{
-		Field1: 1,
-		Field2: 2,
-		Field3: 3,
+		Field01: 1,
+		Field02: 2,
+		Field03: 3,
 	}
 }

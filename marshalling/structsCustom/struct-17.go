@@ -5,24 +5,24 @@ import (
 )
 
 type Struct17 struct {
-	Field1, Field2, Field3, Field4, Field5, Field6, Field7, Field8, Field9 string
+	Field01, Field02, Field03, Field04, Field05, Field06, Field07, Field08, Field09 string
 	Field10, Field11, Field12, Field13, Field14, Field15, Field16, Field17 string
 }
 const jsonSkeletonLength17 = jsonStartLength + shortFieldLength*8 + longFieldLength*8 + jsonEndLength
 func (es *Struct17) MarshalJSON() ([]byte, error) {
-	var buf = make([]byte, 0, jsonSkeletonLength17 + len(es.Field1) + len(es.Field2) + len(es.Field3) + len(es.Field4) +
-		len(es.Field5) + len(es.Field6) + len(es.Field7) + len(es.Field8) + len(es.Field9) + len(es.Field10) +
+	var buf = make([]byte, 0, jsonSkeletonLength17 + len(es.Field01) + len(es.Field02) + len(es.Field03) + len(es.Field04) +
+		len(es.Field05) + len(es.Field06) + len(es.Field07) + len(es.Field08) + len(es.Field09) + len(es.Field10) +
 		len(es.Field11) + len(es.Field12) + len(es.Field13) + len(es.Field14) + len(es.Field15) + len(es.Field16) +
 		len(es.Field17))
-	buf = append(buf, `{"Field1":"`...); buf = append(buf, es.Field1...) //escape field values?
-	buf = append(buf, `","Field2":"`...); buf = append(buf, es.Field2...)
-	buf = append(buf, `","Field3":"`...); buf = append(buf, es.Field3...)
-	buf = append(buf, `","Field4":"`...); buf = append(buf, es.Field4...)
-	buf = append(buf, `","Field5":"`...); buf = append(buf, es.Field5...)
-	buf = append(buf, `","Field6":"`...); buf = append(buf, es.Field6...)
-	buf = append(buf, `","Field7":"`...); buf = append(buf, es.Field7...)
-	buf = append(buf, `","Field8":"`...); buf = append(buf, es.Field8...)
-	buf = append(buf, `","Field9":"`...); buf = append(buf, es.Field9...)
+	buf = append(buf, `{"Field01":"`...); buf = append(buf, es.Field01...) //escape field values?
+	buf = append(buf, `","Field02":"`...); buf = append(buf, es.Field02...)
+	buf = append(buf, `","Field03":"`...); buf = append(buf, es.Field03...)
+	buf = append(buf, `","Field04":"`...); buf = append(buf, es.Field04...)
+	buf = append(buf, `","Field05":"`...); buf = append(buf, es.Field05...)
+	buf = append(buf, `","Field06":"`...); buf = append(buf, es.Field06...)
+	buf = append(buf, `","Field07":"`...); buf = append(buf, es.Field07...)
+	buf = append(buf, `","Field08":"`...); buf = append(buf, es.Field08...)
+	buf = append(buf, `","Field09":"`...); buf = append(buf, es.Field09...)
 	buf = append(buf, `","Field10":"`...); buf = append(buf, es.Field10...)
 	buf = append(buf, `","Field11":"`...); buf = append(buf, es.Field11...)
 	buf = append(buf, `","Field12":"`...); buf = append(buf, es.Field12...)
@@ -36,15 +36,15 @@ func (es *Struct17) MarshalJSON() ([]byte, error) {
 }
 func (es *Struct17) UnmarshalJSON(data []byte) error {
 	l := len(data)-2 // `"}` at the end
-	e := bytes.Index(data[jsonStartLength:l], quoteBytes) + jsonStartLength; es.Field1 = string(data[jsonStartLength:e])
-	s := e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field2 = string(data[s:e])
-	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field3 = string(data[s:e])
-	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field4 = string(data[s:e])
-	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field5 = string(data[s:e])
-	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field6 = string(data[s:e])
-	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field7 = string(data[s:e])
-	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field8 = string(data[s:e])
-	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field9 = string(data[s:e])
+	e := bytes.Index(data[jsonStartLength:l], quoteBytes) + jsonStartLength; es.Field01 = string(data[jsonStartLength:e])
+	s := e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field02 = string(data[s:e])
+	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field03 = string(data[s:e])
+	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field04 = string(data[s:e])
+	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field05 = string(data[s:e])
+	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field06 = string(data[s:e])
+	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field07 = string(data[s:e])
+	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field08 = string(data[s:e])
+	s = e + shortFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field09 = string(data[s:e])
 	s = e + longFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field10 = string(data[s:e])
 	s = e + longFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field11 = string(data[s:e])
 	s = e + longFieldLength; e = bytes.Index(data[s:l], quoteBytes) + s; es.Field12 = string(data[s:e])
@@ -58,15 +58,15 @@ func (es *Struct17) UnmarshalJSON(data []byte) error {
 
 func NewSampleStruct17() *Struct17 {
 	return &Struct17{
-		Field1: "Field1-Value",
-		Field2: "Field2-Value",
-		Field3: "Field3-Value",
-		Field4: "Field4-Value",
-		Field5: "Field5-Value",
-		Field6: "Field6-Value",
-		Field7: "Field7-Value",
-		Field8: "Field8-Value",
-		Field9: "Field9-Value",
+		Field01: "Field01-Value",
+		Field02: "Field02-Value",
+		Field03: "Field03-Value",
+		Field04: "Field04-Value",
+		Field05: "Field05-Value",
+		Field06: "Field06-Value",
+		Field07: "Field07-Value",
+		Field08: "Field08-Value",
+		Field09: "Field09-Value",
 		Field10: "Field10-Value",
 		Field11: "Field11-Value",
 		Field12: "Field12-Value",

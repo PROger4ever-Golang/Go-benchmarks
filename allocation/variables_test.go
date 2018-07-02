@@ -34,7 +34,7 @@ import (
 //ok  	github.com/PROger4ever-Golang/Go-benchmarks/allocation	338.856s
 
 var (
-	tmpField1, tmpField2, tmpField3, tmpField4, tmpField5, tmpField6, tmpField7, tmpField8, tmpField9 int
+	tmpField01, tmpField02, tmpField03, tmpField04, tmpField05, tmpField06, tmpField07, tmpField08, tmpField09 int
 	tmpField10, tmpField11, tmpField12, tmpField13, tmpField14, tmpField15, tmpField16, tmpField17    int
 )
 
@@ -54,27 +54,27 @@ func BenchmarkVariables(b *testing.B) {
 	b.Run("01", func(b *testing.B) {
 		b.Run("Primitives", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1 = n + 1
+				tmpField01 = n + 1
 			}
 		})
 		b.Run("StructObject", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpStruct01 = structsInt.Struct01{
-					Field1: n + 1,
+					Field01: n + 1,
 				}
 			}
 		})
 		b.Run("StructPointer", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpPointer01 = &structsInt.Struct01{
-					Field1: n + 1,
+					Field01: n + 1,
 				}
 			}
 		})
 		b.Run("StructNew", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpPointer01 = new(structsInt.Struct01)
-				tmpPointer01.Field1 = n + 1
+				tmpPointer01.Field01 = n + 1
 			}
 		})
 	})
@@ -82,35 +82,35 @@ func BenchmarkVariables(b *testing.B) {
 	b.Run("03", func(b *testing.B) {
 		b.Run("Primitives", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1 = n + 1
-				tmpField2 = n + 2
-				tmpField3 = n + 3
+				tmpField01 = n + 1
+				tmpField02 = n + 2
+				tmpField03 = n + 3
 			}
 		})
 		b.Run("StructObject", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpStruct03 = structsInt.Struct03{
-					Field1: n + 1,
-					Field2: n + 2,
-					Field3: n + 3,
+					Field01: n + 1,
+					Field02: n + 2,
+					Field03: n + 3,
 				}
 			}
 		})
 		b.Run("StructPointer", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpPointer03 = &structsInt.Struct03{
-					Field1: n + 1,
-					Field2: n + 2,
-					Field3: n + 3,
+					Field01: n + 1,
+					Field02: n + 2,
+					Field03: n + 3,
 				}
 			}
 		})
 		b.Run("StructNew", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpPointer03 = new(structsInt.Struct03)
-				tmpPointer03.Field1 = n + 1
-				tmpPointer03.Field2 = n + 2
-				tmpPointer03.Field3 = n + 3
+				tmpPointer03.Field01 = n + 1
+				tmpPointer03.Field02 = n + 2
+				tmpPointer03.Field03 = n + 3
 			}
 		})
 	})
@@ -118,43 +118,43 @@ func BenchmarkVariables(b *testing.B) {
 	b.Run("05", func(b *testing.B) {
 		b.Run("Primitives", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1 = n + 1
-				tmpField2 = n + 2
-				tmpField3 = n + 3
-				tmpField4 = n + 4
-				tmpField5 = n + 5
+				tmpField01 = n + 1
+				tmpField02 = n + 2
+				tmpField03 = n + 3
+				tmpField04 = n + 4
+				tmpField05 = n + 5
 			}
 		})
 		b.Run("StructObject", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpStruct05 = structsInt.Struct05{
-					Field1: n + 1,
-					Field2: n + 2,
-					Field3: n + 3,
-					Field4: n + 4,
-					Field5: n + 5,
+					Field01: n + 1,
+					Field02: n + 2,
+					Field03: n + 3,
+					Field04: n + 4,
+					Field05: n + 5,
 				}
 			}
 		})
 		b.Run("StructPointer", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpPointer05 = &structsInt.Struct05{
-					Field1: n + 1,
-					Field2: n + 2,
-					Field3: n + 3,
-					Field4: n + 4,
-					Field5: n + 5,
+					Field01: n + 1,
+					Field02: n + 2,
+					Field03: n + 3,
+					Field04: n + 4,
+					Field05: n + 5,
 				}
 			}
 		})
 		b.Run("StructNew", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpPointer05 = new(structsInt.Struct05)
-				tmpPointer05.Field1 = n + 1
-				tmpPointer05.Field2 = n + 2
-				tmpPointer05.Field3 = n + 3
-				tmpPointer05.Field4 = n + 4
-				tmpPointer05.Field5 = n + 5
+				tmpPointer05.Field01 = n + 1
+				tmpPointer05.Field02 = n + 2
+				tmpPointer05.Field03 = n + 3
+				tmpPointer05.Field04 = n + 4
+				tmpPointer05.Field05 = n + 5
 			}
 		})
 	})
@@ -162,30 +162,30 @@ func BenchmarkVariables(b *testing.B) {
 	b.Run("10", func(b *testing.B) {
 		b.Run("Primitives", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1 = n + 1
-				tmpField2 = n + 2
-				tmpField3 = n + 3
-				tmpField4 = n + 4
-				tmpField5 = n + 5
-				tmpField6 = n + 6
-				tmpField7 = n + 7
-				tmpField8 = n + 8
-				tmpField9 = n + 9
+				tmpField01 = n + 1
+				tmpField02 = n + 2
+				tmpField03 = n + 3
+				tmpField04 = n + 4
+				tmpField05 = n + 5
+				tmpField06 = n + 6
+				tmpField07 = n + 7
+				tmpField08 = n + 8
+				tmpField09 = n + 9
 				tmpField10 = n + 10
 			}
 		})
 		b.Run("StructObject", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpStruct10 = structsInt.Struct10{
-					Field1: n + 1,
-					Field2: n + 2,
-					Field3: n + 3,
-					Field4: n + 4,
-					Field5: n + 5,
-					Field6: n + 6,
-					Field7: n + 7,
-					Field8: n + 8,
-					Field9: n + 9,
+					Field01: n + 1,
+					Field02: n + 2,
+					Field03: n + 3,
+					Field04: n + 4,
+					Field05: n + 5,
+					Field06: n + 6,
+					Field07: n + 7,
+					Field08: n + 8,
+					Field09: n + 9,
 					Field10: n + 10,
 				}
 			}
@@ -193,15 +193,15 @@ func BenchmarkVariables(b *testing.B) {
 		b.Run("StructPointer", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpPointer10 = &structsInt.Struct10{
-					Field1: n + 1,
-					Field2: n + 2,
-					Field3: n + 3,
-					Field4: n + 4,
-					Field5: n + 5,
-					Field6: n + 6,
-					Field7: n + 7,
-					Field8: n + 8,
-					Field9: n + 9,
+					Field01: n + 1,
+					Field02: n + 2,
+					Field03: n + 3,
+					Field04: n + 4,
+					Field05: n + 5,
+					Field06: n + 6,
+					Field07: n + 7,
+					Field08: n + 8,
+					Field09: n + 9,
 					Field10: n + 10,
 				}
 			}
@@ -209,15 +209,15 @@ func BenchmarkVariables(b *testing.B) {
 		b.Run("StructNew", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpPointer10 = new(structsInt.Struct10)
-				tmpPointer10.Field1 = n + 1
-				tmpPointer10.Field2 = n + 2
-				tmpPointer10.Field3 = n + 3
-				tmpPointer10.Field4 = n + 4
-				tmpPointer10.Field5 = n + 5
-				tmpPointer10.Field6 = n + 6
-				tmpPointer10.Field7 = n + 7
-				tmpPointer10.Field8 = n + 8
-				tmpPointer10.Field9 = n + 9
+				tmpPointer10.Field01 = n + 1
+				tmpPointer10.Field02 = n + 2
+				tmpPointer10.Field03 = n + 3
+				tmpPointer10.Field04 = n + 4
+				tmpPointer10.Field05 = n + 5
+				tmpPointer10.Field06 = n + 6
+				tmpPointer10.Field07 = n + 7
+				tmpPointer10.Field08 = n + 8
+				tmpPointer10.Field09 = n + 9
 				tmpPointer10.Field10 = n + 10
 			}
 		})
@@ -226,15 +226,15 @@ func BenchmarkVariables(b *testing.B) {
 	b.Run("17", func(b *testing.B) {
 		b.Run("Primitives", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
-				tmpField1 = n + 1
-				tmpField2 = n + 2
-				tmpField3 = n + 3
-				tmpField4 = n + 4
-				tmpField5 = n + 5
-				tmpField6 = n + 6
-				tmpField7 = n + 7
-				tmpField8 = n + 8
-				tmpField9 = n + 9
+				tmpField01 = n + 1
+				tmpField02 = n + 2
+				tmpField03 = n + 3
+				tmpField04 = n + 4
+				tmpField05 = n + 5
+				tmpField06 = n + 6
+				tmpField07 = n + 7
+				tmpField08 = n + 8
+				tmpField09 = n + 9
 				tmpField10 = n + 10
 				tmpField11 = n + 11
 				tmpField12 = n + 12
@@ -248,15 +248,15 @@ func BenchmarkVariables(b *testing.B) {
 		b.Run("StructObject", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpStruct17 = structsInt.Struct17{
-					Field1: n + 1,
-					Field2: n + 2,
-					Field3: n + 3,
-					Field4: n + 4,
-					Field5: n + 5,
-					Field6: n + 6,
-					Field7: n + 7,
-					Field8: n + 8,
-					Field9: n + 9,
+					Field01: n + 1,
+					Field02: n + 2,
+					Field03: n + 3,
+					Field04: n + 4,
+					Field05: n + 5,
+					Field06: n + 6,
+					Field07: n + 7,
+					Field08: n + 8,
+					Field09: n + 9,
 					Field10: n + 10,
 					Field11: n + 11,
 					Field12: n + 12,
@@ -271,15 +271,15 @@ func BenchmarkVariables(b *testing.B) {
 		b.Run("StructPointer", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpPointer17 = &structsInt.Struct17{
-					Field1: n + 1,
-					Field2: n + 2,
-					Field3: n + 3,
-					Field4: n + 4,
-					Field5: n + 5,
-					Field6: n + 6,
-					Field7: n + 7,
-					Field8: n + 8,
-					Field9: n + 9,
+					Field01: n + 1,
+					Field02: n + 2,
+					Field03: n + 3,
+					Field04: n + 4,
+					Field05: n + 5,
+					Field06: n + 6,
+					Field07: n + 7,
+					Field08: n + 8,
+					Field09: n + 9,
 					Field10: n + 10,
 					Field11: n + 11,
 					Field12: n + 12,
@@ -294,15 +294,15 @@ func BenchmarkVariables(b *testing.B) {
 		b.Run("StructNew", func(b *testing.B) {
 			for n := 0; n < b.N; n++ {
 				tmpPointer17 = new(structsInt.Struct17)
-				tmpPointer17.Field1 = n + 1
-				tmpPointer17.Field2 = n + 2
-				tmpPointer17.Field3 = n + 3
-				tmpPointer17.Field4 = n + 4
-				tmpPointer17.Field5 = n + 5
-				tmpPointer17.Field6 = n + 6
-				tmpPointer17.Field7 = n + 7
-				tmpPointer17.Field8 = n + 8
-				tmpPointer17.Field9 = n + 9
+				tmpPointer17.Field01 = n + 1
+				tmpPointer17.Field02 = n + 2
+				tmpPointer17.Field03 = n + 3
+				tmpPointer17.Field04 = n + 4
+				tmpPointer17.Field05 = n + 5
+				tmpPointer17.Field06 = n + 6
+				tmpPointer17.Field07 = n + 7
+				tmpPointer17.Field08 = n + 8
+				tmpPointer17.Field09 = n + 9
 				tmpPointer17.Field10 = n + 10
 				tmpPointer17.Field11 = n + 11
 				tmpPointer17.Field12 = n + 12
