@@ -9,8 +9,6 @@ import (
 
 //approximate result
 //$ go test -benchmem -bench=^BenchmarkCollections$ -benchtime=10s --timeout 99999s ./...
-//PASS
-//ok  	github.com/PROger4ever-Golang/Go-benchmarks/allocation	0.002s
 //goos: linux
 //goarch: amd64
 //pkg: github.com/PROger4ever-Golang/Go-benchmarks/collections

@@ -7,20 +7,6 @@ import (
 
 //approximate result
 //$ go test -benchmem -bench=^BenchmarkStruct.*$ -benchtime=10s --timeout 99999s ./...
-//PASS
-//ok  	github.com/PROger4ever-Golang/Go-benchmarks/collections	0.001s
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common/samples/jsonsStrings	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common/samples/mapsInt	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common/samples/mapsStrings	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common/samples/structsInt	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/common/samples/structsStrings	[no test files]
-//PASS
-//ok  	github.com/PROger4ever-Golang/Go-benchmarks/interfaces	0.001s
-//PASS
-//ok  	github.com/PROger4ever-Golang/Go-benchmarks/marshalling	0.001s
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/marshalling/structsCustom	[no test files]
-//?   	github.com/PROger4ever-Golang/Go-benchmarks/marshalling/structsMap	[no test files]
 //goos: linux
 //goarch: amd64
 //pkg: github.com/PROger4ever-Golang/Go-benchmarks/structs
